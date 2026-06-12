@@ -21,7 +21,7 @@
     },
     {
         "id": "3",
-        "category": "客製蛋糕",
+        "category": "手作餅乾",
         "tagClass": "custom",
         "date": "2026-06-05",
         "title": "客製化插牌蛋糕",
@@ -30,8 +30,28 @@
         "image": "image/66.jpg"
     },
     {
-        "id": "3",
+        "id": "4",
         "category": "客製蛋糕",
+        "tagClass": "custom",
+        "date": "2026-06-05",
+        "title": "抽錢蛋糕的小兔兔花園蛋糕",
+        "excerpt": "專屬立牌，打造獨一無二的驚喜",
+        "content": "<p>根據顧客喜好設計的衝浪主題插牌，搭配海浪般的粉霧藍抹面與新鮮草莓點綴，將壽星的興趣完美融入甜點中。</p>",
+        "image": "image/369.jpg"
+    },
+    {
+        "id": "5",
+        "category": "特色鹹甜點",
+        "tagClass": "custom",
+        "date": "2026-06-05",
+        "title": "抽錢蛋糕的小兔兔花園蛋糕",
+        "excerpt": "專屬立牌，打造獨一無二的驚喜",
+        "content": "<p>根據顧客喜好設計的衝浪主題插牌，搭配海浪般的粉霧藍抹面與新鮮草莓點綴，將壽星的興趣完美融入甜點中。</p>",
+        "image": "image/369.jpg"
+    },
+    {
+        "id": "6",
+        "category": "手作餅乾",
         "tagClass": "custom",
         "date": "2026-06-05",
         "title": "抽錢蛋糕的小兔兔花園蛋糕",

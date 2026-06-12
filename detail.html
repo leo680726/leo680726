@@ -18,15 +18,17 @@
         </div>
     </main>
 
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. 取得網址列上的參數 (例如 ?id=cake-01)
             const urlParams = new URLSearchParams(window.location.search);
             const cakeId = urlParams.get('id');
-
             const container = document.getElementById('detail-content');
 
-            // 如果網址沒有 ID，請他回首頁
             if (!cakeId) {
                 container.innerHTML = `
                     <div style="text-align:center; padding: 50px;">
@@ -36,15 +38,12 @@
                 return;
             }
 
-            // 2. 讀取 JSON 資料檔
             fetch('portfolio.json')
                 .then(response => response.json())
                 .then(data => {
-                    // 3. 在資料中尋找符合這個 ID 的蛋糕
                     const cake = data.find(item => item.id === cakeId);
                     
                     if (cake) {
-                        // 4. 把找到的蛋糕資料，填入精心設計的內頁排版中
                         container.innerHTML = `
                             <div class="breadcrumb">
                                 <a href="index.html">🏠 首頁</a> > <span>${cake.category}</span>
@@ -52,7 +51,11 @@
                             
                             <div class="detail-card">
                                 <div class="detail-img-box">
-                                    <img src="${cake.image}" alt="${cake.title}">
+                                    <img src="${cake.image}" alt="${cake.title}" 
+                                         onclick="openLightbox(this.src)" 
+                                         style="cursor: zoom-in;" title="點擊放大圖片">
+
+                                    <div class="zoom-hint">🔍 點圖可放大</div>
                                 </div>
                                 <div class="detail-text">
                                     <h2>${cake.title}</h2>
@@ -67,6 +70,17 @@
                                 </div>
                             </div>
                         `;
+
+                        /* 如果未來你的 JSON 的 content 裡面也有圖片想放大，可以加上這段 (選用) */
+                        setTimeout(() => {
+                            const descImages = document.querySelectorAll('.detail-desc img');
+                            descImages.forEach(img => {
+                                img.style.cursor = 'zoom-in';
+                                img.title = '點擊放大圖片';
+                                img.onclick = function() { openLightbox(this.src); };
+                            });
+                        }, 100);
+
                     } else {
                         container.innerHTML = '<p style="text-align:center; padding: 50px;">作品不存在，可能被貓咪偷吃了 😿</p>';
                     }
@@ -76,6 +90,25 @@
                     container.innerHTML = '<p style="text-align:center; padding: 50px;">資料連線異常 😿</p>';
                 });
         });
+
+        // =========================================
+        // 新增：控制燈箱的 JavaScript 函數
+        // =========================================
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;    // 把點擊的圖片網址塞進燈箱裡
+            lightbox.classList.add('show'); // 加上 show 類別來顯示燈箱
+            document.body.style.overflow = 'hidden'; // 防止背景網頁跟著滾動
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('show'); // 移除 show 類別隱藏燈箱
+            document.body.style.overflow = 'auto'; // 恢復背景網頁的滾動
+        }
     </script>
+</body>
+</html>
 </body>
 </html>
