@@ -411,3 +411,73 @@ button:hover {
         right: 20px;
     }
 }
+
+/* =========================================
+   手機版優化 (RWD) - 最大寬度 600px 以下生效
+========================================= */
+
+/* 先設定：在電腦大螢幕上，把提示文字隱藏起來 */
+.scroll-hint-mobile {
+    display: none;
+}
+
+/* 下面大括號裡的規則，只有手機螢幕才看得到 */
+@media only screen and (max-width: 600px) {
+
+    /* 1. 顯示貓掌提示文字，並加上微微閃爍的動畫 */
+    .scroll-hint-mobile {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        color: var(--accent-blue);
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        animation: pulseText 2s infinite;
+    }
+
+    /* 定義閃爍動畫 */
+    @keyframes pulseText {
+        0% {
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0.5;
+        }
+    }
+
+    /* 2. 讓分類按鈕變成可以左右滑動 */
+    .filter-buttons {
+        justify-content: flex-start;
+        /* 讓按鈕靠左對齊 */
+        flex-wrap: nowrap;
+        /* 強制不折行 */
+        overflow-x: auto;
+        /* 超出範圍時產生橫向滑動 */
+        padding: 0 10px 10px 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 在最後一個按鈕右邊強制撐開 10px，避免滑到底時死貼著螢幕 */
+    .filter-buttons::after {
+        content: '';
+        flex: 0 0 10px;
+    }
+
+    /* 3. 隱藏醜醜的系統預設捲軸 */
+    .filter-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 4. 微調按鈕大小，避免變形 */
+    .filter-btn {
+        flex: 0 0 auto;
+        /* 保護按鈕不被壓縮 */
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+}
