@@ -1,6 +1,8 @@
 /* style.css */
 
-/* 視覺風格與色彩計畫 */
+/* =========================================
+   視覺風格與色彩計畫
+========================================= */
 :root {
     --bg-color: #FDFBF7;
     /* 奶油白 */
@@ -40,21 +42,165 @@ header h1 {
     font-size: 28px;
 }
 
-/* 首頁橫幅 */
-.hero {
-    padding: 60px 20px;
-    text-align: center;
+/* =========================================
+   方案二：左右圖文排版 Hero 區塊
+========================================= */
+.hero-split-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.hero-split-style .hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-split-style h2 {
+    text-align: left;
+    font-size: 32px;
+    color: var(--text-brown);
+    line-height: 1.4;
+}
+
+.hero-split-style p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hero-split-style .hero-image {
+    flex: 1;
+}
+
+.hero-split-style .hero-image img {
+    width: 100%;
+    border-radius: 30px 30px 30px 5px;
+    /* 特殊造型的圓角 */
+    box-shadow: 0 15px 30px rgba(141, 110, 99, 0.15);
+}
+
+/* =========================================
+   關於烘焙師 (About Section) 樣式
+========================================= */
+.about-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-container {
+    background-color: var(--card-bg);
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(141, 110, 99, 0.04);
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+/* 左側頭貼設計 */
+.about-avatar-box {
+    flex: 0 0 200px;
+}
+
+.about-avatar-placeholder {
+    width: 180px;
+    height: 180px;
+    background-color: #f7f1e3;
+    border: 3px dashed var(--accent-blue);
+    border-radius: 50%;
+    /* 圓形大頭貼 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 右側文字與標題 */
+.about-text-box {
+    flex: 1;
+}
+
+.about-subtitle {
+    color: var(--accent-blue);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.about-text-box h2 {
+    text-align: left;
+    margin: 5px 0 15px 0;
+    color: var(--text-brown);
+    font-size: 28px;
+}
+
+.about-intro-title {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-intro-title span {
+    color: var(--text-brown);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 2px;
+}
+
+/* 專業項目膠囊標籤 */
+.about-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.service-tag {
     background-color: var(--accent-blue);
     color: white;
-    border-radius: 0 0 30px 30px;
-    margin-bottom: 40px;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
-.hero p {
-    font-size: 18px;
+.about-cta-text {
+    font-size: 15px;
+    color: var(--text-brown);
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-/* 作品集展示區塊 (橫式滑動) */
+/* 安心承諾與通知小卡 */
+.about-trust-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.badge-item {
+    background-color: var(--bg-color);
+    color: #7c6055;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    border-left: 4px solid var(--text-brown);
+    /* 左側棕色裝飾條 */
+    font-weight: bold;
+}
+
+/* =========================================
+   作品集展示區塊 (橫式滑動)
+========================================= */
 .gallery-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -160,6 +306,7 @@ header h1 {
     border-radius: 15px;
     margin-top: 10px;
 }
+
 /* 聯絡區塊 */
 .contact {
     text-align: center;
@@ -186,7 +333,6 @@ button:hover {
 /* =========================================
    以下為 內頁 (detail.html) 專用樣式
 ========================================= */
-
 .detail-container {
     max-width: 900px;
     margin: 40px auto;
@@ -221,30 +367,17 @@ button:hover {
     /* 讓手機版能自動折行 */
 }
 
-/* 圖片區塊 */
-.detail-img-box {
-    flex: 1 1 400px;
-    /* 彈性調整寬度 */
-}
-
-/* =========================================
-   圖片放大提示標籤
-========================================= */
-
 /* 確保原本的圖片區塊是相對定位，這樣標籤才能貼著它 */
 .detail-img-box {
     flex: 1 1 400px;
     position: relative;
-    /* 確保加上這行 */
 }
 
 /* 提示標籤的外觀與絕對定位 */
 .zoom-hint {
     position: absolute;
     bottom: 15px;
-    /* 距離底部 15px */
     right: 15px;
-    /* 距離右側 15px */
     background-color: rgba(141, 110, 99, 0.85);
     /* 咖啡棕色半透明背景 */
     color: white;
@@ -254,7 +387,7 @@ button:hover {
     font-size: 13px;
     letter-spacing: 1px;
     pointer-events: none;
-    /* 💡 這是魔法：讓滑鼠點擊能穿透文字，直接點到後方的圖片 */
+    /* 讓滑鼠點擊能穿透文字，直接點到後方的圖片 */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     opacity: 0.7;
     /* 預設稍微透明 */
@@ -324,8 +457,6 @@ button:hover {
 /* =========================================
    圖片放大燈箱 (Lightbox) 樣式
 ========================================= */
-
-/* 燈箱背景：預設隱藏，覆蓋全螢幕，半透明黑底 */
 .lightbox {
     display: none;
     position: fixed;
@@ -341,7 +472,6 @@ button:hover {
     /* 背景模糊效果 */
 }
 
-/* 當加上 show 類別時才顯示，並帶有淡入動畫 */
 .lightbox.show {
     display: flex;
     justify-content: center;
@@ -349,7 +479,6 @@ button:hover {
     animation: fadeIn 0.3s ease;
 }
 
-/* 燈箱內的圖片：限制最大尺寸，避免超出螢幕 */
 .lightbox-content {
     margin: auto;
     display: block;
@@ -363,7 +492,6 @@ button:hover {
     /* 圖片微放大的動畫 */
 }
 
-/* 關閉按鈕 (X) */
 .lightbox-close {
     position: absolute;
     top: 20px;
@@ -383,7 +511,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* 淡入與縮放動畫設定 */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -404,7 +531,61 @@ button:hover {
     }
 }
 
-/* 手機版微調：讓關閉按鈕好點一點 */
+
+/* ==================================================================
+   手機與平板電腦優化區塊 (RWD) 
+   所有響應式排版邏輯皆集中於此，依照螢幕寬度自動切換
+================================================================== */
+
+/* 先設定：在電腦大螢幕上，把提示文字隱藏起來 */
+.scroll-hint-mobile {
+    display: none;
+}
+
+/* 📱 階段一：當螢幕寬度小於 768px 生效（主要微調 Hero 與 關於我 區塊） */
+@media only screen and (max-width: 768px) {
+
+    /* 方案二：左右圖文排版 Hero 轉為上下排版 */
+    .hero-split-style {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .hero-split-style .hero-text,
+    .hero-split-style h2 {
+        text-align: center;
+    }
+
+    /* 關於烘焙師區塊轉為上下直式排版 */
+    .about-container {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .about-text-box h2 {
+        text-align: center;
+    }
+
+    .about-services {
+        justify-content: center;
+        /* 專業服務標籤在手機版置中 */
+    }
+
+    .about-avatar-box {
+        flex: 0 0 auto;
+    }
+
+    .badge-item {
+        text-align: left;
+        /* 保持通知條文字靠左，維持良好閱讀感 */
+    }
+}
+
+/* 📱 階段二：當螢幕寬度小於 700px / 600px 生效（微調燈箱與作品集滑動區塊） */
 @media only screen and (max-width: 700px) {
     .lightbox-close {
         top: 10px;
@@ -412,19 +593,9 @@ button:hover {
     }
 }
 
-/* =========================================
-   手機版優化 (RWD) - 最大寬度 600px 以下生效
-========================================= */
-
-/* 先設定：在電腦大螢幕上，把提示文字隱藏起來 */
-.scroll-hint-mobile {
-    display: none;
-}
-
-/* 下面大括號裡的規則，只有手機螢幕才看得到 */
 @media only screen and (max-width: 600px) {
 
-    /* 1. 顯示貓掌提示文字，並加上微微閃爍的動畫 */
+    /* 1. 顯示貓掌滑動提示文字，並啟動閃爍動畫 */
     .scroll-hint-mobile {
         display: block;
         text-align: center;
@@ -435,7 +606,6 @@ button:hover {
         animation: pulseText 2s infinite;
     }
 
-    /* 定義閃爍動畫 */
     @keyframes pulseText {
         0% {
             opacity: 0.5;
@@ -450,90 +620,31 @@ button:hover {
         }
     }
 
-    /* 2. 讓分類按鈕變成可以左右滑動 */
+    /* 2. 強制作品集分類膠囊按鈕橫向滑動 */
     .filter-buttons {
         justify-content: flex-start;
-        /* 讓按鈕靠左對齊 */
         flex-wrap: nowrap;
-        /* 強制不折行 */
         overflow-x: auto;
-        /* 超出範圍時產生橫向滑動 */
         padding: 0 10px 10px 10px;
         -webkit-overflow-scrolling: touch;
     }
 
-    /* 在最後一個按鈕右邊強制撐開 10px，避免滑到底時死貼著螢幕 */
+    /* 右側留白，避免最後一個按鈕被螢幕邊緣切掉 */
     .filter-buttons::after {
         content: '';
         flex: 0 0 10px;
     }
 
-    /* 3. 隱藏醜醜的系統預設捲軸 */
+    /* 3. 隱藏系統預設的水平捲軸 */
     .filter-buttons::-webkit-scrollbar {
         display: none;
     }
 
-    /* 4. 微調按鈕大小，避免變形 */
+    /* 4. 微調手機版按鈕內距，保持精緻圓潤 */
     .filter-btn {
         flex: 0 0 auto;
-        /* 保護按鈕不被壓縮 */
+        /* 防止按鈕寬度被擠壓變形 */
         font-size: 14px;
         padding: 6px 16px;
-    }
-}
-
-/* =========================================
-   方案二：左右圖文排版 Hero 區塊
-========================================= */
-.hero-split-style {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 40px auto 60px auto;
-    padding: 0 20px;
-    gap: 40px;
-}
-
-.hero-split-style .hero-text {
-    flex: 1;
-    text-align: left;
-}
-
-.hero-split-style h2 {
-    text-align: left;
-    font-size: 32px;
-    color: var(--text-brown);
-    line-height: 1.4;
-}
-
-.hero-split-style p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-.hero-split-style .hero-image {
-    flex: 1;
-}
-
-.hero-split-style .hero-image img {
-    width: 100%;
-    border-radius: 30px 30px 30px 5px;
-    /* 特殊造型的圓角 */
-    box-shadow: 0 15px 30px rgba(141, 110, 99, 0.15);
-}
-
-/* 手機版：把左右排版改成上下排版 */
-@media only screen and (max-width: 768px) {
-    .hero-split-style {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .hero-split-style .hero-text,
-    .hero-split-style h2 {
-        text-align: center;
     }
 }
