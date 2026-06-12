@@ -481,3 +481,59 @@ button:hover {
         padding: 6px 16px;
     }
 }
+
+/* =========================================
+   方案二：左右圖文排版 Hero 區塊
+========================================= */
+.hero-split-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.hero-split-style .hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-split-style h2 {
+    text-align: left;
+    font-size: 32px;
+    color: var(--text-brown);
+    line-height: 1.4;
+}
+
+.hero-split-style p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hero-split-style .hero-image {
+    flex: 1;
+}
+
+.hero-split-style .hero-image img {
+    width: 100%;
+    border-radius: 30px 30px 30px 5px;
+    /* 特殊造型的圓角 */
+    box-shadow: 0 15px 30px rgba(141, 110, 99, 0.15);
+}
+
+/* 手機版：把左右排版改成上下排版 */
+@media only screen and (max-width: 768px) {
+    .hero-split-style {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .hero-split-style .hero-text,
+    .hero-split-style h2 {
+        text-align: center;
+    }
+}
