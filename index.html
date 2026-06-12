@@ -1,13 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>貓咪的甜點日常 | 個人烘焙作品集</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <strong>這是首頁</strong>
+
+    <header>
+        <h1>🐈 貓咪的甜點日常</h1>
+    </header>
+
+    <section class="hero">
+        <h2>用貓咪的慵懶，烤出溫暖的甜點</h2>
+        <p>每一口都是手作的溫度，每一份都是專屬的客製</p>
+    </section>
+
+<section class="gallery-section">
+        <h2>精選作品集</h2>
+        
+        <div class="item-group" id="portfolio-container">
+            </div>
+    </section>
+
+    <section class="contact">
+        <h2>想為重要的人訂製蛋糕嗎？</h2>
+        <p>歡迎與我討論專屬的口味與設計！</p>
+        <button onclick="meowAlert()">喵！聯絡烘焙師 🐾</button>
+    </section>
     
+
+    <section class="contact">
+        <h2>想為重要的人訂製蛋糕嗎？</h2>
+        <p>歡迎與我討論專屬的口味與設計！</p>
+        <button onclick="meowAlert()">喵！聯絡烘焙師 🐾</button>
+    </section>
+
+    <script>
+        function meowAlert() {
+            alert("喵！聯絡表單準備中，請稍候！🐾\n（未來這裡可以串接表單或是連結到你的社群軟體）");
+        }
+
+        // 當網頁載入完成後，執行讀取 JSON 的動作
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('portfolio-container');
+
+            // 讀取同一資料夾下的 portfolio.json
+            fetch('portfolio.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('網路回應異常');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 成功抓取後，清空容器預設內容
+                    container.innerHTML = '';
+
+                    // 迴圈跑過每一筆作品資料並動態產生 HTML 結構
+                    data.forEach(item => {
+                        // 這裡使用 title 作為標題、excerpt 作為簡介，image 作為圖片來源
+                        const itemHTML = `
+                            <div class="item" data-category="${item.category}" data-id="${item.id}">
+                                <img class="item-img" src="${item.image}" alt="${item.title}">
+                                <div class="item-info">
+                                    <h3>${item.title}</h3>
+                                    <p>${item.excerpt}</p>
+                                </div>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', itemHTML);
+                    });
+                })
+                .catch(error => {
+                    console.error('JSON 載入失敗:', error);
+                    container.innerHTML = '<p style="text-align: center;">糟糕！🐾 貓咪把作品集弄丟了，請確認伺服器或 JSON 檔案路徑。</p>';
+                });
+        });
+    </script>
+
 </body>
 </html>
