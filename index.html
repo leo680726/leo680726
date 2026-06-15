@@ -155,7 +155,9 @@
       </div>
     </section>
 
-    <button id="backToTopBtn" title="回到最上方"><i class="fa-solid fa-chevron-up"></i></button>
+    <button id="backToTopBtn" title="回到最上方">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <script>
       function meowAlert() {
@@ -230,27 +232,28 @@
       });
 
       // =========================================
-        // 回到最上方按鈕邏輯
-        // =========================================
-        const backToTopBtn = document.getElementById("backToTopBtn");
+      // 回到最上方按鈕邏輯
+      // =========================================
+      const backToTopBtn = document.getElementById("backToTopBtn");
 
-        // 監聽網頁捲動事件
-        window.addEventListener('scroll', () => {
-            // 當往下捲動超過 300px 時，顯示按鈕
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add("show");
-            } else {
-                backToTopBtn.classList.remove("show");
-            }
-        });
+      // 監聽網頁捲動事件
+      window.addEventListener("scroll", () => {
+        // 當往下捲動超過 300px 時，顯示按鈕
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add("show");
+        } else {
+          backToTopBtn.classList.remove("show");
+        }
+      });
 
-        // 點擊按鈕時，平滑捲動到最上方
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' /* 這個魔法會讓畫面平滑往上滑，而不是生硬地瞬間跳轉 */
-            });
+      // 點擊按鈕時，平滑捲動到最上方
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior:
+            "smooth" /* 這個魔法會讓畫面平滑往上滑，而不是生硬地瞬間跳轉 */,
         });
+      });
     </script>
   </body>
 </html>
