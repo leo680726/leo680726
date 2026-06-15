@@ -558,7 +558,7 @@ button:hover {
 }
 
 /* =========================================
-   聯絡區塊內的社群連結圖示
+   聯絡區塊內的社群連結圖示 (方案一：溫柔質感風)
 ========================================= */
 .social-links {
     display: flex;
@@ -582,31 +582,32 @@ button:hover {
     box-shadow: 0 4px 10px rgba(141, 110, 99, 0.1);
     /* 淡淡的棕色系陰影 */
     transition: all 0.3s ease;
+    text-decoration: none;
+    /* 💡 確保圖示下方不會出現超連結的底線 */
 }
 
 .social-icon i {
     font-size: 22px;
     /* 字體圖示用 font-size 控制大小 */
     color: var(--text-brown);
-    /* 字體圖示用 color 控制顏色 */
+    /* 預設融合網站的咖啡棕色 */
     transition: color 0.3s ease;
+    line-height: 0;
+    /* 💡 確保圖示在圓圈內絕對完美置中 */
 }
 
-/* Facebook 懸停變藍底白字 */
-.social-icon.fb:hover {
-    background-color: #1877F2;
+/* 💡 懸停特效：卡片微放大、浮起，並散發專屬粉霧藍光暈 */
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.05);
+    /* 增加微微放大的 Q 彈感 */
+    background-color: var(--accent-blue);
+    /* 統一使用烘焙坊專屬藍色 */
+    box-shadow: 0 8px 20px rgba(174, 198, 207, 0.6);
+    /* 藍色發光陰影 */
 }
 
-.social-icon.fb:hover i {
-    color: #FFFFFF;
-}
-
-/* Instagram 懸停變桃紅底白字 */
-.social-icon.ig:hover {
-    background-color: #E4405F;
-}
-
-.social-icon.ig:hover i {
+/* 懸停時，圖示統一變成純白色 */
+.social-icon:hover i {
     color: #FFFFFF;
 }
 
