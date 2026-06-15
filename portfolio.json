@@ -3,6 +3,16 @@
         "id": "1",
         "category": "客製蛋糕",
         "tagClass": "custom",
+        "date": "2026-06-15",
+        "title": "卡娜赫拉5歲生日蛋糕",
+        "excerpt": "5歲的你和現在的你，都是值得被真心對待的。",
+        "content": "<p>如果你突然覺得<br>為什麼別人都可以這麼輕鬆<br>為什麼自己卻要這麼累的時候<br>你或許需要好好休息一下了<br>你正在成為更好的自己<br>給自己一個打氣<br>好好睡一覺吧<br><br>附上N年前的作品<br>可愛的卡娜赫拉5歲孩子的蛋糕<br>5歲的你和現在的你<br>都是值得被真心對待的<br>一起變好吧</p>",
+        "image": "image/3971.jpg"
+    },
+    {
+        "id": "2",
+        "category": "客製蛋糕",
+        "tagClass": "custom",
         "date": "2026-06-12",
         "title": "客製擠花字體蛋糕",
         "excerpt": "簡約風格，傳遞最純粹的心意",
@@ -10,7 +20,7 @@
         "image": "image/36.jpg"
     },
     {
-        "id": "2",
+        "id": "3",
         "category": "手作餅乾",
         "tagClass": "savory",
         "date": "2026-06-10",
@@ -20,7 +30,7 @@
         "image": "image/0615.jpg"
     },
     {
-        "id": "3",
+        "id": "4",
         "category": "客製蛋糕",
         "tagClass": "custom",
         "date": "2026-06-05",
@@ -30,7 +40,7 @@
         "image": "image/66.jpg"
     },
     {
-        "id": "4",
+        "id": "5",
         "category": "客製蛋糕",
         "tagClass": "custom",
         "date": "2026-06-05",
@@ -40,7 +50,7 @@
         "image": "image/69.jpg"
     },
     {
-        "id": "5",
+        "id": "6",
         "category": "特色鹹甜點",
         "tagClass": "custom",
         "date": "2026-06-05",
@@ -50,7 +60,7 @@
         "image": "image/38.jpg"
     },
     {
-        "id": "6",
+        "id": "7",
         "category": "客製蛋糕",
         "tagClass": "custom",
         "date": "2026-06-05",
@@ -60,7 +70,7 @@
         "image": "image/369.jpg"
     },
     {
-        "id": "7",
+        "id": "8",
         "category": "客製蛋糕",
         "tagClass": "custom",
         "date": "2026-06-15",
@@ -68,5 +78,25 @@
         "excerpt": "巧克力愛好者欽點款，沒有健康只有絕對的好吃！",
         "content": "<p>超濃又入口即化<br>神奇的甜度提出巧克力香氣<br>巧克力派皮酥酥層次口感<br>巧克力愛好者欽點款之一<br><br>這個沒有健康只有好吃 🍫🤤</p>",
         "image": "image/78.jpg"
+    },
+    {
+        "id": "9",
+        "category": "手作餅乾",
+        "tagClass": "custom",
+        "date": "2026-06-15",
+        "title": "大人味的布朗尼",
+        "excerpt": "無奶油神奇配方，法國70%苦甜與100%無糖可可粉的濃郁結合",
+        "content": "<p>內含法國70%苦甜加上100%法國無糖可可粉<br>外疊again可可粉<br>無奶油和添加物的神奇配方<br>超濃～不甜的奇妙口感<br><br>之後要改版了<br>改版前給大家留念品香一下 🍫</p>",
+        "image": "image/54.jpg"
+    },
+    {
+        "id": "10",
+        "category": "客製蛋糕",
+        "tagClass": "custom",
+        "date": "2026-06-15",
+        "title": "雲朵觀音茶可可蛋糕",
+        "excerpt": "麥芽糖醇打造減半熱量，讓你安心大吃的可愛搭配",
+        "content": "<p>雲朵☁️觀音茶香緹<br>綿綿可可蛋糕🍫<br>可可愛愛的搭配<br>只用麥芽糖醇<br>熱量減半<br>不為別的只為安心大吃😋</p>",
+        "image": "image/32.jpg"
     }
 ]
