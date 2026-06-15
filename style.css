@@ -254,6 +254,8 @@ header h1 {
 .concept-highlight {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    /* 💡 新增：當手機螢幕太窄時，允許標籤整塊掉到下一行 */
 }
 
 .concept-highlight span {
@@ -264,6 +266,8 @@ header h1 {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
+    white-space: nowrap;
+    /* 💡 關鍵魔法：強制裡面的文字絕對不折行 */
 }
 
 /* 右側食材網格 (使用 Grid 排版) */
