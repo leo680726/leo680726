@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>貓希兒無限工作室 | 個人烘焙作品集</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,115 +16,131 @@
     </header>
 
     <section class="hero-split-style">
-        <div class="hero-text">
-            <h2>用貓咪的慵懶，<br>烤出溫暖的甜點</h2>
-            <p>每一口都是手作的溫度，每一份都是專屬的客製</p>
-            <button onclick="document.querySelector('.gallery-section').scrollIntoView({behavior: 'smooth'})">往下看作品 🐾</button>
-        </div>
-        <div class="hero-image">
-            <img src="image/3971.jpg" alt="首頁主視覺">
-        </div>
-    </section>
-    
+      <div class="hero-text">
+        <h2>用貓咪的慵懶，<br />烤出溫暖的甜點</h2>
+        <p>每一口都是手作的溫度，每一份都是專屬的客製</p>
+        <button
+          onclick="
+            document
+              .querySelector('.gallery-section')
+              .scrollIntoView({ behavior: 'smooth' })
+          ">
+          往下看作品 🐾
+        </button>
+      </div>
+      <div class="hero-image">
+        <img src="image/3971.jpg" alt="首頁主視覺" />
+      </div>
     </section>
 
     <section class="about-section">
-        <div class="about-container">
-            
-            <div class="about-avatar-box">
-                <div class="about-avatar-placeholder">🐈</div>
-            </div>
-            
-            <div class="about-text-box">
-                <span class="about-subtitle">Meet the Baker 🐾</span>
-                <h2>關於烘焙師</h2>
-                <h3 class="about-intro-title">我是<span>貓希</span>，純粹喜歡甜點的國考營養師 📋</h3>
-                
-                <div class="about-services">
-                    <span class="service-tag">活動企劃</span>
-                    <span class="service-tag">烘焙教學</span>
-                    <span class="service-tag">講座課程</span>
-                    <span class="service-tag">營養諮詢</span>
-                </div>
-                
-                <p class="about-cta-text">🎂 蛋糕可參考下方的精選作品集，歡迎隨時跟我討論唷！</p>
-                
-                <div class="about-trust-badges">
-                    <div class="badge-item">🛡️ 本店已投保產品責任險，美味又安心</div>
-                    <div class="badge-item">🔔 甜點不定期開單～記得隨時鎖定唷</div>
-                </div>
-            </div>
-
+      <div class="about-container">
+        <div class="about-avatar-box">
+          <img
+            src="image/666.jpg"
+            alt="烘焙師貓希的個人照"
+            class="about-avatar-img" />
         </div>
+
+        <div class="about-text-box">
+          <span class="about-subtitle">Meet the Baker 🐾</span>
+          <h2>關於烘焙師</h2>
+          <h3 class="about-intro-title">
+            我是<span>貓希</span>，純粹喜歡甜點的國考營養師 📋
+          </h3>
+
+          <div class="about-services">
+            <span class="service-tag">活動企劃</span>
+            <span class="service-tag">烘焙教學</span>
+            <span class="service-tag">講座課程</span>
+            <span class="service-tag">營養諮詢</span>
+          </div>
+
+          <p class="about-cta-text">
+            🎂 蛋糕可參考下方的精選作品集，歡迎隨時跟我討論唷！
+          </p>
+
+          <div class="about-trust-badges">
+            <div class="badge-item">🛡️ 本店已投保產品責任險，美味又安心</div>
+            <div class="badge-item">🔔 甜點不定期開單～記得隨時鎖定唷</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    
-    
     <section class="gallery-section">
-        <h2>精選作品集</h2>
+      <h2>精選作品集</h2>
 
-        <div class="scroll-hint-mobile">🐾 左右滑動查看更多分類 🐾</div>
-        
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">全部作品</button>
-            <button class="filter-btn" data-filter="客製蛋糕">客製蛋糕</button>
-            <button class="filter-btn" data-filter="特色鹹甜點">特色鹹甜點</button>
-            <button class="filter-btn" data-filter="手作餅乾">手作餅乾</button> </div>
-        
-        <div class="item-group" id="portfolio-container">
-            </div>
+      <div class="scroll-hint-mobile">🐾 左右滑動查看更多分類 🐾</div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">全部作品</button>
+        <button class="filter-btn" data-filter="客製蛋糕">客製蛋糕</button>
+        <button class="filter-btn" data-filter="特色鹹甜點">特色鹹甜點</button>
+        <button class="filter-btn" data-filter="手作餅乾">手作餅乾</button>
+      </div>
+
+      <div class="item-group" id="portfolio-container"></div>
     </section>
 
     <section class="contact">
-        <h2>想為重要的人訂製蛋糕嗎？</h2>
-        <p>歡迎與我討論專屬的口味與設計！</p>
-        <button onclick="meowAlert()">喵！聯絡烘焙師 🐾</button>
+      <h2>想為重要的人訂製蛋糕嗎？</h2>
+      <p>歡迎與我討論專屬的口味與設計！</p>
+      <button onclick="meowAlert()">喵！聯絡烘焙師 🐾</button>
 
-        <div class="social-links">
-            <a href="這裡請換成你的FB專頁網址" target="_blank" class="social-icon fb" title="前往 Facebook 粉絲專頁">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="這裡請換成你的IG個人頁網址" target="_blank" class="social-icon ig" title="前往 Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-
-        
+      <div class="social-links">
+        <a
+          href="這裡請換成你的FB專頁網址"
+          target="_blank"
+          class="social-icon fb"
+          title="前往 Facebook 粉絲專頁">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a
+          href="這裡請換成你的IG個人頁網址"
+          target="_blank"
+          class="social-icon ig"
+          title="前往 Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
     </section>
 
     <script>
-        function meowAlert() {
-            alert("喵！聯絡表單準備中，請稍候！🐾");
-        }
+      function meowAlert() {
+        alert("喵！聯絡表單準備中，請稍候！🐾");
+      }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('portfolio-container');
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            let allCakes = []; // 用來儲存從 JSON 抓下來的所有蛋糕資料
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("portfolio-container");
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        let allCakes = []; // 用來儲存從 JSON 抓下來的所有蛋糕資料
 
-            // 1. 讀取 JSON 資料
-            fetch('portfolio.json')
-                .then(response => response.json())
-                .then(data => {
-                    allCakes = data; // 把資料存起來
-                    renderCakes(allCakes); // 預設渲染全部作品
-                })
-                .catch(error => {
-                    console.error('JSON 載入失敗:', error);
-                    container.innerHTML = '<p style="text-align: center;">糟糕！🐾 貓咪把作品集弄丟了。</p>';
-                });
+        // 1. 讀取 JSON 資料
+        fetch("portfolio.json")
+          .then((response) => response.json())
+          .then((data) => {
+            allCakes = data; // 把資料存起來
+            renderCakes(allCakes); // 預設渲染全部作品
+          })
+          .catch((error) => {
+            console.error("JSON 載入失敗:", error);
+            container.innerHTML =
+              '<p style="text-align: center;">糟糕！🐾 貓咪把作品集弄丟了。</p>';
+          });
 
-            // 2. 負責把蛋糕資料畫到畫面上的函數
-            function renderCakes(cakesToRender) {
-                container.innerHTML = ''; // 先清空畫面
-                
-                if (cakesToRender.length === 0) {
-                    container.innerHTML = '<p style="text-align: center; width: 100%;">這個分類目前還沒有作品被烤出來唷 🐾</p>';
-                    return;
-                }
+        // 2. 負責把蛋糕資料畫到畫面上的函數
+        function renderCakes(cakesToRender) {
+          container.innerHTML = ""; // 先清空畫面
 
-                cakesToRender.forEach(item => {
-                    const itemHTML = `
+          if (cakesToRender.length === 0) {
+            container.innerHTML =
+              '<p style="text-align: center; width: 100%;">這個分類目前還沒有作品被烤出來唷 🐾</p>';
+            return;
+          }
+
+          cakesToRender.forEach((item) => {
+            const itemHTML = `
                         <div class="item" onclick="window.location.href='detail.html?id=${item.id}'" style="cursor: pointer;">
                             <img class="item-img" src="${item.image}" alt="${item.title}">
                             <div class="item-info">
@@ -132,31 +150,33 @@
                             </div>
                         </div>
                     `;
-                    container.insertAdjacentHTML('beforeend', itemHTML);
-                });
+            container.insertAdjacentHTML("beforeend", itemHTML);
+          });
+        }
+
+        // 3. 處理分類按鈕點擊事件
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // 移除所有按鈕的 active 狀態
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            // 給被點擊的按鈕加上 active 狀態
+            this.classList.add("active");
+
+            // 取得被點擊按鈕的過濾條件
+            const filterValue = this.getAttribute("data-filter");
+
+            if (filterValue === "all") {
+              renderCakes(allCakes); // 顯示全部
+            } else {
+              // 利用陣列的 filter 功能，只抓出符合 category 的蛋糕
+              const filteredCakes = allCakes.filter(
+                (cake) => cake.category === filterValue,
+              );
+              renderCakes(filteredCakes);
             }
-
-            // 3. 處理分類按鈕點擊事件
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // 移除所有按鈕的 active 狀態
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // 給被點擊的按鈕加上 active 狀態
-                    this.classList.add('active');
-
-                    // 取得被點擊按鈕的過濾條件
-                    const filterValue = this.getAttribute('data-filter');
-
-                    if (filterValue === 'all') {
-                        renderCakes(allCakes); // 顯示全部
-                    } else {
-                        // 利用陣列的 filter 功能，只抓出符合 category 的蛋糕
-                        const filteredCakes = allCakes.filter(cake => cake.category === filterValue);
-                        renderCakes(filteredCakes);
-                    }
-                });
-            });
+          });
         });
+      });
     </script>
   </body>
 </html>
