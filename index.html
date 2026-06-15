@@ -68,6 +68,55 @@
       </div>
     </section>
 
+    <section class="concept-section">
+      <div class="concept-container">
+        <div class="concept-text">
+          <span class="concept-subtitle">Our Philosophy 🐾</span>
+          <h2>好吃，再多一點健康</h2>
+          <p class="concept-desc">
+            身為營養師，我明白「想吃甜點又怕負擔」的掙扎。<br />
+            因此，我致力於反覆的<strong>配方調整</strong>，嚴選六大<strong>安心食材</strong>。在保留極致美味的同時，溫柔地降低身體的負擔。
+          </p>
+          <div class="concept-highlight">
+            <span>✨ 配方調整</span>
+            <span>✨ 安心食材</span>
+          </div>
+        </div>
+
+        <div class="ingredient-grid">
+          <div class="ingredient-item">
+            <i class="fa-solid fa-leaf"></i>
+            <h4>進口麥芽糖醇</h4>
+            <p>溫和微甜，取代部分精緻糖，享受甜點少負擔。</p>
+          </div>
+          <div class="ingredient-item">
+            <i class="fa-solid fa-seedling"></i>
+            <h4>奧利塔玄米油</h4>
+            <p>優質好油，讓蛋糕體更加輕盈、清爽不油膩。</p>
+          </div>
+          <div class="ingredient-item">
+            <i class="fa-solid fa-cookie-bite"></i>
+            <h4>法國可可貝芮巧克力</h4>
+            <p>百年頂級品牌，帶來醇厚迷人的可可香氣。</p>
+          </div>
+          <div class="ingredient-item">
+            <i class="fa-solid fa-palette"></i>
+            <h4>台灣天然色素粉</h4>
+            <p>拒絕人工化學，堅持使用天然蔬果原色點綴。</p>
+          </div>
+          <div class="ingredient-item">
+            <i class="fa-solid fa-egg"></i>
+            <h4>牧場洗選蛋</h4>
+            <p>來源透明的新鮮雞蛋，是美味蛋糕的紮實靈魂。</p>
+          </div>
+          <div class="ingredient-item">
+            <i class="fa-solid fa-cheese"></i>
+            <h4>安佳奶油</h4>
+            <p>紐西蘭純淨乳源，賦予甜點最純粹的濃醇奶香。</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="gallery-section">
       <h2>精選作品集</h2>
 
@@ -97,7 +146,7 @@
           <i class="fa-brands fa-facebook-f"></i>
         </a>
         <a
-          href="這裡請換成你的IG個人頁網址"
+          href="https://www.instagram.com/meowsy.dietitian?igsh=YWdoM2hkZTh5bTRu&utm_source=qr"
           target="_blank"
           class="social-icon ig"
           title="前往 Instagram">
@@ -105,6 +154,8 @@
         </a>
       </div>
     </section>
+
+    <button id="backToTopBtn" title="回到最上方"><i class="fa-solid fa-chevron-up"></i></button>
 
     <script>
       function meowAlert() {
@@ -177,6 +228,29 @@
           });
         });
       });
+
+      // =========================================
+        // 回到最上方按鈕邏輯
+        // =========================================
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // 監聽網頁捲動事件
+        window.addEventListener('scroll', () => {
+            // 當往下捲動超過 300px 時，顯示按鈕
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        });
+
+        // 點擊按鈕時，平滑捲動到最上方
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' /* 這個魔法會讓畫面平滑往上滑，而不是生硬地瞬間跳轉 */
+            });
+        });
     </script>
   </body>
 </html>
